@@ -46,12 +46,12 @@ $comments->alt(' comment-odd', ' comment-even');
         <div class="comment-view" onclick="">
             <div class="comment-header">
                 <img class="avatar" src="<?php echo $avatar ?>" width="<?php echo $size ?>" height="<?php echo $size ?>" />
-                <span class="comment-author<?php echo $commentClass; ?>"><?php echo $author; ?></span>
             </div>
             <div class="comment-content">
                 <p><?php $comments->content(); ?></p>
             </div>
             <div class="comment-meta">
+                <span class="comment-author<?php echo $commentClass; ?>"><?php echo $author; ?></span>
                 <time class="comment-time"><?php $comments->date('M j, Y'); ?></time>
                 <span class="comment-reply"><?php $comments->reply('回复'); ?></span>
             </div>
@@ -67,11 +67,11 @@ $comments->alt(' comment-odd', ' comment-even');
 
 
 <div id="<?php $this->respondId(); ?>" class="comment-container">
-    <div id="comments" class="clearfix">
+    <div id="comments">
         <?php $this->comments()->to($comments); ?>
         <?php if($this->allow('comment')): ?>
         <form method="post" action="<?php $this->commentUrl() ?>" id="comment-form" class="comment-form" role="form" onsubmit ="getElementById('submit').disabled=true;return true;">
-          <h3><?php $this->commentsNum(_t('沙发还在'), _t('只有一条评论QAQ'), _t('已经有 %d 条评论啦')); ?></h3>
+          <h3 class="commentsnum"><?php $this->commentsNum(_t('沙发还在'), _t('只有一条评论QAQ'), _t('已经有 %d 条评论啦')); ?></h3>
           <span class="response"><?php if($this->user->hasLogin()): ?>  「<a href="<?php $this->options->profileUrl(); ?>" data-no-instant><?php $this->user->screenName(); ?></a>」<a href="<?php $this->options->logoutUrl(); ?>" title="Logout" data-no-instant>换个ID</a> ?<?php endif; ?> <?php $comments->cancelReply('取消回复'); ?></span>
             <?php if(!$this->user->hasLogin()): ?>
             <input type="text" name="author" maxlength="12" id="author" class="text" placeholder="昵称" value="" required>

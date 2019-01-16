@@ -15,14 +15,20 @@
 </head>
 
 <body>
-        <div class="left-col">
-            <div class="hd">
-                <img src="https://secure.gravatar.com/avatar/7400af4725430d4029381e34d0bfcdff?s=256">
-            </div>
-            <h1><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h1>
-            <nav>
-                <li><a href="<?php $this->options->siteUrl(); ?>">首页</a></li>
-                <?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
-                <?php $this->widget('Widget_Contents_Page_List')->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
-            </nav>
+    <div class="header">
+        <i class="fa fa-bars" aria-hidden="true" ></i>
+        <div class="site-title">
+            <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
         </div>
+    </div>
+    <div class="left-col">
+        <div class="hd">
+            <img src="https://secure.gravatar.com/avatar/7400af4725430d4029381e34d0bfcdff?s=256">
+            <h3><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h3>
+        </div>
+        <nav>
+            <li><a href="<?php $this->options->siteUrl(); ?>">首页</a></li>
+            <?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
+            <?php $this->widget('Widget_Contents_Page_List')->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
+        </nav>
+    </div>

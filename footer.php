@@ -1,23 +1,33 @@
 <?php $this->footer(); ?>
 
     <footer>
-        <div class="social-menu">
-            <a rel="nofollow" title="新浪微博" href="http://weibo.com/u/6006370066" target="_blank">
-                <i class="fa fa-weibo"></i>
-            </a>
-            <a rel="nofollow" title="Twitter" href="https://twitter.com/geekcj12" target="_blank">
-                <i class="fa fa-twitter"></i>
-            </a>
-            <a rel="nofollow" title="Instagram" href="https://instagram.com/geekcj12" target="_blank">
-                <i class="fa fa-instagram"></i>
-            </a>
-            <a rel="nofollow" title="Telegram" href="http://t.me/geekcj12" target="_blank">
-                <i class="fa fa-telegram"></i>
-            </a>
-            <a rel="nofollow" title="E-mail" href="mailto:geekcj@geekcj.com" target="_blank">
-                <i class="fa fa-envelope"></i>
-            </a>
-        </div>
+        <ul class="social-menu">
+        <li>
+                <a rel="nofollow" title="新浪微博" href="http://weibo.com/u/6006370066" target="_blank">
+                    <i class="fa fa-weibo"></i>
+                </a>
+            </li>
+            <li>
+                <a rel="nofollow" title="Twitter" href="https://twitter.com/geekcj12" target="_blank">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a rel="nofollow" title="Instagram" href="https://instagram.com/geekcj12" target="_blank">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a rel="nofollow" title="Telegram" href="http://t.me/geekcj12" target="_blank">
+                    <i class="fa fa-telegram"></i>
+                </a>
+            </li>
+            <li>
+                <a rel="nofollow" title="E-mail" href="mailto:geekcj@geekcj.com" target="_blank">
+                    <i class="fa fa-envelope"></i>
+                </a>
+            </li>
+        </ul>
         <p>&copy; 2016-<?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.All Rights Reserved.</p>
         <p><a href="http://www.miitbeian.gov.cn/" target="_blank">皖ICP备17016228号-1</a><br><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44190002001762" target="_blank"><img src="https://cdn.geekcj.com/beian.png">粤公网安备 44190002001762号</a></p>
         <p>网站已运行 <?php echo floor((time()-strtotime("2016-11-11"))/86400); ?> 天</p>
