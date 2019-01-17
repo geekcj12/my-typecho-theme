@@ -436,6 +436,7 @@ pre::-webkit-scrollbar-thumb{
 
 #comments .comment-meta {
     margin-top: 5px;
+    margin-left: 50px;
     color: #aaa;
     font-size: 12px;
 }
@@ -447,7 +448,7 @@ pre::-webkit-scrollbar-thumb{
 }
 
 #comments .comment-content p {
-    margin: 0;
+    margin: 0 0 0 50px;
     font-size: 14px;
 }
 
