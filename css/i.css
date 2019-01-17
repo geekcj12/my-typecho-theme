@@ -40,7 +40,7 @@ body{
     -webkit-transform: translateY(0);
     transform: translateY(0);
     transition: transform .5s ease-out;
-}    
+}
 
 /* 左边栏 */
 #left-col{
@@ -461,7 +461,7 @@ pre::-webkit-scrollbar-thumb{
 footer{
     color: #9eabb3;
     margin-left: 250px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     text-align: center;
     padding: 10px 0;
     letter-spacing: 1px;
@@ -516,10 +516,11 @@ footer .social-menu a{
 }
 
 .links li {
+    width: 85px;
     display: inline-block;
     border-radius: 6px;
-    padding: 5px 15px;
-    margin-bottom: 10px;
+    padding: 5px 10px;
+    margin: 0 10px 10px 10px;
     transition: background .3s ease;
 }
 
@@ -542,6 +543,8 @@ footer .social-menu a{
 }
 
 .links li span {
+    font-size: 13px;
+    line-height: 16px;
     display: block;
 }
 
@@ -589,9 +592,15 @@ footer .social-menu a{
         padding: 0;
         position: fixed;
         top: 50px;
-        right: 500px;
+        left: 0;
         width: 250px;
         z-index: 4;
+        transform: translateX(-100%);
+        transition: transform .3s ease-out;
+    }
+
+    .show-sidebar {
+        transform: translateX(0) !important;
     }
 
     .content{

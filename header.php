@@ -15,12 +15,6 @@
 </head>
 
 <body>
-    <div class="header">
-        <i id="menu" class="fa fa-bars" aria-hidden="true"></i>
-        <div class="site-title">
-            <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
-        </div>
-    </div>
     <div id="left-col">
         <div class="hd">
             <img src="https://secure.gravatar.com/avatar/7400af4725430d4029381e34d0bfcdff?s=256">
@@ -31,4 +25,10 @@
             <?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
             <?php $this->widget('Widget_Contents_Page_List')->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
         </nav>
+    </div>
+    <div class="header">
+        <i id="menu" class="fa fa-bars" aria-hidden="true" aria-controls="menu" aria-expanded="false"></i>
+        <div class="site-title">
+            <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+        </div>
     </div>

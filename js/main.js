@@ -20,9 +20,15 @@ window.addEventListener('scroll', function(e) {
     new_scroll_position = last_scroll_position;
 });
 
-$(document).ready(function(){
-  $('#menu').sideToggle({
-    moving: '#left-col',
-    direction: 'left'
-  });
-});
+// 移动端菜单栏
+function toggleSidebar() {
+  var show_sidebar = document.getElementById("left-col").classList.contains("show-sidebar");
+  if (show_sidebar == false) {
+    document.getElementById("left-col").classList.add("show-sidebar");
+  } else {
+    document.getElementById("left-col").classList.remove("show-sidebar");
+  }
+}
+
+var menu = document.getElementById("menu");
+menu.onclick = toggleSidebar;
