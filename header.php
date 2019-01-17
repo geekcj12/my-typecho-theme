@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
-<link href="<?php $this->options->themeUrl('css/i.css'); ?>" rel="stylesheet">
+<link href="<?php $this->options->themeUrl('css/i.min.css'); ?>" rel="stylesheet">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('css/OwO.min.css'); ?>">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('css/font-awesome.min.css'); ?>">
 <link rel="icon" href="<?php $this->options->themeUrl('image/32.png'); ?>" sizes="32x32"/>
@@ -16,12 +16,12 @@
 
 <body>
     <div class="header">
-        <i class="fa fa-bars" aria-hidden="true" ></i>
+        <i id="menu" class="fa fa-bars" aria-hidden="true"></i>
         <div class="site-title">
             <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
         </div>
     </div>
-    <div class="left-col">
+    <div id="left-col">
         <div class="hd">
             <img src="https://secure.gravatar.com/avatar/7400af4725430d4029381e34d0bfcdff?s=256">
             <h3><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h3>

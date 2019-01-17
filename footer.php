@@ -33,6 +33,10 @@
         <p>网站已运行 <?php echo floor((time()-strtotime("2016-11-11"))/86400); ?> 天</p>
     </footer>
 
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/velocity/2.0.5/velocity.min.js"></script>
+    <script src="<?php $this->options->themeUrl('js/slideToggleExtended.min.js'); ?>"></script>
+    <script src="<?php $this->options->themeUrl('js/main.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/OwO.min.js'); ?>"></script>
     <script>
 		//OWO
