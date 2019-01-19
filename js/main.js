@@ -8,13 +8,14 @@ window.addEventListener('scroll', function(e) {
     
     // 向下滚动
     if (new_scroll_position < last_scroll_position && last_scroll_position > 80) {
-    header.classList.remove("slideDown");
-    header.classList.add("slideUp");
+      document.getElementById("left-col").classList.remove("show-sidebar");
+      header.classList.remove("slideDown");
+      header.classList.add("slideUp");
     }
     // 向上滚动
     if (new_scroll_position > last_scroll_position) {
-    header.classList.remove("slideUp");
-    header.classList.add("slideDown");
+      header.classList.remove("slideUp");
+      header.classList.add("slideDown");
     }
     
     new_scroll_position = last_scroll_position;
