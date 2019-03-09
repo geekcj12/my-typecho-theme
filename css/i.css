@@ -218,7 +218,7 @@ body{
 
 /* POST */
 .page-content{
-    margin: 30px auto;
+    margin: 1.5em auto;
 }
 
 .post-title{
@@ -510,42 +510,66 @@ footer .social-menu a{
 /* LINKS */
 .links {
     overflow: hidden;
-    margin: 10px;
+    margin: 2em auto;
     padding: 10px 0;
     text-align: center;
 }
 
 .links li {
-    width: 85px;
     display: inline-block;
-    border-radius: 6px;
-    padding: 5px 10px;
-    margin: 0 10px 10px 10px;
-    transition: background .3s ease;
+    position: relative;
+    text-align: left;
+    border-radius: .5em;
+    transition: background .3s ease-out;
 }
 
 .links li:hover {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(88, 88, 88, 0.1);
 }
 
 .links li a {
     color: #4e687b;
-}
-
-.links li a:hover {
-    color: #4e687b;
+    height: 6.5em;
+    width: 10em;
+    float: left;
+    padding: 0 1em 0 6.5em;
+    text-decoration: none;
 }
 
 .links li img {
-    width: 70px;
-    height: 70px;
+    width: 4.5em;
+    height: 4.5em;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    background-color: #eee;
     border-radius: 50%;
+    box-shadow: 0 0.5em 2em #f1f4f7;
 }
 
-.links li span {
-    font-size: 13px;
-    line-height: 16px;
-    display: block;
+.links li h3 {
+    padding-top: 8px;
+    line-height: 15px;
+}
+
+.links li p {
+    font-size: 14px;
+    opacity: .5;
+}
+
+/* 404 */
+.error-404 {
+    text-align: center;
+    padding: 12em 0;
+    letter-spacing: 2px;
+}
+
+.error-404 h2 {
+    font-weight: normal;
+}
+
+.error-404 p {
+    color: #999;
 }
 
 /* 自适应 */
@@ -603,6 +627,10 @@ footer .social-menu a{
         transform: translateX(0) !important;
     }
 
+    .page-content {
+        margin: 3em auto;
+    }
+
     .content{
         max-width: 100%;
         margin: 0;
@@ -625,5 +653,9 @@ footer .social-menu a{
         width: 100%;
         margin: 0;
         font-size: 0.8em;
+    }
+
+    .error-404 {
+        padding: 8em 0;
     }
 }

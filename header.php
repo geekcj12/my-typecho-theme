@@ -17,7 +17,7 @@
 <body>
     <div id="left-col">
         <div class="hd">
-            <img src="https://secure.gravatar.com/avatar/7400af4725430d4029381e34d0bfcdff?s=256">
+            <?php $this->author->gravatar("256"); ?>
             <h3><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h3>
         </div>
         <nav>

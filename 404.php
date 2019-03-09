@@ -1,6 +1,12 @@
 <?php $this->need('header.php'); ?>
 
-    <h1 class="post-title">404</h1>
-    <p style="text-align: center;">这里什么也没有QAQ</p>
+<div class="content">
+    <div class="page-content">
+        <div class="error-404">
+            <h2>404 Not Found</h2>
+            <p>这里什么也没有QAQ</p>
+        </div>
+    </div>
+</div>
 
 <?php $this->need('footer.php'); ?>

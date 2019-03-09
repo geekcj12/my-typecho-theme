@@ -1,4 +1,5 @@
 <?php
+if (!defined('__TYPECHO_ROOT_DIR__')) exit;
 // 字数统计
 function  art_count ($cid){
     $db=Typecho_Db::get ();
@@ -47,5 +48,16 @@ array_push($views, $cid);
         }
     }
     echo $row['views'];
+}
+
+/* 后台配置 */
+function themeConfig($form) {
+    echo "<h2 style='text-align: center'>主题配置</h2>";
+    
+    $beian = new Typecho_Widget_Helper_Form_Element_Text('icp', NULL, NULL, _t('ICP备案号') , _t('如网站已备案，请输入备案号'));
+    $form->addInput($beian);
+
+    $beian = new Typecho_Widget_Helper_Form_Element_Text('beian', NULL, NULL, _t('公安备案号') , _t('如网站已备案，请输入备案号'));
+    $form->addInput($beian);
 }
 ?>

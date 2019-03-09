@@ -29,16 +29,23 @@
             </li>
         </ul>
         <p>&copy; 2016-<?php echo date('Y'); ?> <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>.All Rights Reserved.</p>
-        <p><a href="http://www.miitbeian.gov.cn/" target="_blank">皖ICP备17016228号-1</a><br><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44190002001762" target="_blank"><img src="https://cdn.geekcj.com/beian.png">粤公网安备 44190002001762号</a></p>
+        <p>
+            <a href="http://www.miitbeian.gov.cn/" target="_blank">
+                <?php $this->options->icp(); ?>
+            </a>
+            <br>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44190002001762" target="_blank">
+                <img src="https://cdn.geekcj.com/beian.png"><?php $this->options->beian(); ?>
+            </a>
+        </p>
         <p>网站已运行 <?php echo floor((time()-strtotime("2016-11-11"))/86400); ?> 天</p>
     </footer>
 
     <script src="<?php $this->options->themeUrl('js/main.min.js'); ?>"></script>
     <script src="<?php $this->options->themeUrl('js/OwO.min.js'); ?>"></script>
     <script>
-		//OWO
 		var OwO = new OwO({
-		    logo: 'QAQ',
+		    logo: 'OwO',
 		    container: document.getElementsByClassName('OwO')[0],
 		    target: document.getElementsByClassName('textarea')[0],
 		    api: '<?php $this->options->themeUrl('js/OwO.json'); ?>',
@@ -72,6 +79,5 @@
     s.parentNode.insertBefore(bp, s);
     })();
     </script>
-
 </body>
 </html>
