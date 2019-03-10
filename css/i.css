@@ -548,6 +548,7 @@ footer .social-menu a{
 }
 
 .links li h3 {
+    font-weight: normal;
     padding-top: 8px;
     line-height: 15px;
 }

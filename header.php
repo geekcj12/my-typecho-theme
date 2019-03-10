@@ -21,7 +21,7 @@
     <div id="left-col">
         <div class="hd">
             <?php if($this -> options -> avatar): ?>
-                <?php $this -> options -> avatar(); ?>
+                <img src="<?php $this -> options -> avatar(); ?>">
             <?php else: ?>
                 <?php $this->author->gravatar("256"); ?>
             <?php endif; ?>
