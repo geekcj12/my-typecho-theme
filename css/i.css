@@ -556,6 +556,9 @@ footer .social-menu a{
 .links li p {
     font-size: 14px;
     opacity: .5;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 /* 404 */

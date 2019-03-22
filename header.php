@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="theme-color" content="#00bdff">
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 <link href="<?php $this->options->themeUrl('css/i.min.css'); ?>" rel="stylesheet">
 <link rel="stylesheet" href="<?php $this->options->themeUrl('css/OwO.min.css'); ?>">
