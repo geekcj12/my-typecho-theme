@@ -34,9 +34,11 @@
             <?php $this->widget('Widget_Contents_Page_List')->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
         </nav>
     </div>
-    <div class="header">
-        <i id="menu" class="fa fa-bars" aria-hidden="true" aria-controls="menu" aria-expanded="false"></i>
-        <div class="site-title">
-            <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+
+    <div id="wrap">
+        <div class="header">
+            <i id="menu" class="fa fa-bars" aria-hidden="true" aria-controls="menu" aria-expanded="false"></i>
+            <div class="site-title">
+                <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+            </div>
         </div>
-    </div>

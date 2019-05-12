@@ -30,41 +30,37 @@ body{
     display: none;
 }
 
-.slideUp {
-    -webkit-transform: translateY(-100px);
-    transform: translateY(-100px);
-    transition: transform .5s ease-out;
-}
-  
-.slideDown {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-    transition: transform .5s ease-out;
-}
+#wrap {
+    position: inherit;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: transform .3s ease-out;
+} 
 
 /* 左边栏 */
 #left-col{
-    border-right: solid 1px #e4e4e4;
-    width: 250px;
-    background-size: cover;
-    height: 100%;
     position: fixed;
     top: 0;
+    width: 250px;
+    height: 100%;
+    border-right: solid 1px #e4e4e4;
     overflow: auto;
     background: #fff;
 }
 
 #left-col .hd {
-    background-color: #00bdff;
     padding-top: 25px;
     padding-bottom: 5px;
+    background-color: #00bdff;
 }
 
 #left-col .hd img{
     display: block;
-    margin: 0 auto;
     width: 7em;
     height: 7em;
+    margin: 0 auto;
     border-radius: 50%;
 }
 
@@ -82,7 +78,7 @@ body{
 
 #left-col nav{
     text-align: center;
-    margin-top: 50px;
+    margin: 50px auto;
 }
 
 #left-col nav li{
@@ -584,16 +580,19 @@ footer .social-menu a{
     }
 }
 
-@media screen and (max-width: 720px){
+@media screen and (max-width: 768px){
+    .move-wrap {
+        transform: translateX(250px);
+    }
+    
     .header {
         display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
         background-color: #00bdff;
         height: 50px;
-        position: fixed;
         width: 100%;
-        top: 0;
-        right: 0;
-        z-index: 9999;
     }
 
     .header i {
@@ -615,13 +614,26 @@ footer .social-menu a{
         text-decoration: none;
     }
 
+    .slideUp {
+        -webkit-transform: translateY(-100px);
+        transform: translateY(-100px);
+        transition: transform .5s ease-out;
+    }
+      
+    .slideDown {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        transition: transform .5s ease-out;
+    }
+
     #left-col {
-        height: 100%;
-        padding: 0;
         position: fixed;
-        top: 50px;
+        top: 0;
         left: 0;
         width: 250px;
+        height: 100%;
+        border: none;
+        padding: 0;
         z-index: 4;
         transform: translateX(-100%);
         transition: transform .3s ease-out;
