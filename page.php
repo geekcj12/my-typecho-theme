@@ -1,13 +1,11 @@
 <?php $this->need('header.php'); ?>
-<div class="content">
-	<div class="page-content">
+<main class="main">
+	<div class="content">
 		<h2 class="post-title"><?php $this->title() ?></h2>
-		<div class="post">
+		<div class="post-content">
 			<?php $this->content(''); ?>
 		</div>
+
+		<?php $this->need('comments.php'); ?>
+		<?php $this->need('footer.php'); ?>
 	</div>
-
-<?php $this->need('comments.php'); ?>
-</div>
-
-<?php $this->need('footer.php'); ?>

@@ -19,26 +19,29 @@
 </head>
 
 <body>
-    <div id="left-col">
-        <div class="hd">
-            <?php if($this -> options -> avatar): ?>
-                <img src="<?php $this -> options -> avatar(); ?>">
-            <?php else: ?>
-                <?php $this->author->gravatar("256"); ?>
-            <?php endif; ?>
-            <h3><a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a></h3>
-        </div>
-        <nav>
-            <li><a href="<?php $this->options->siteUrl(); ?>">首页</a></li>
-            <?php $this->widget('Widget_Metas_Category_List')->parse('<li><a href="{permalink}">{name}</a></li>'); ?>
-            <?php $this->widget('Widget_Contents_Page_List')->parse('<li><a href="{permalink}">{title}</a></li>'); ?>
-        </nav>
-    </div>
-
     <div id="wrap">
-        <div class="header">
+        <header class="header">
             <i id="menu" class="fa fa-bars" aria-hidden="true" aria-controls="menu" aria-expanded="false"></i>
-            <div class="site-title">
-                <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+            <a href="<?php $this->options->siteUrl(); ?>" class="site-title"><?php $this->options->title(); ?></a>
+        </header>
+        <aside class="sidebar">
+            <div class="sidebar-top">
+                <?php if($this -> options -> avatar): ?>
+                    <img src="<?php $this -> options -> avatar(); ?>" class="avatar">
+                <?php else: ?>
+                    <img src="https://secure.gravatar.com/avatar/<?php echo md5(strtolower($this->author->mail)); ?>?s=256" class="avatar">
+                <?php endif; ?>
+                <h3 class="site-name">
+                    <a href="<?php $this->options->siteUrl(); ?>"><?php $this->options->title(); ?></a>
+                </h3>
             </div>
-        </div>
+            <nav class="sidebar-nav">
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a href="<?php $this->options->siteUrl(); ?>">首页</a>
+                    </li>
+                    <?php $this->widget('Widget_Metas_Category_List')->parse('<li class="menu-item"><a href="{permalink}">{name}</a></li>'); ?>
+                    <?php $this->widget('Widget_Contents_Page_List')->parse('<li class="menu-item"><a href="{permalink}">{title}</a></li>'); ?>
+                </ul>
+            </nav>
+        </aside>
