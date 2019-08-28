@@ -631,7 +631,6 @@ pre::-webkit-scrollbar-thumb{
 .links {
     overflow: hidden;
     margin: 2em auto;
-    padding: 10px 0;
     text-align: center;
 }
 
