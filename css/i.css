@@ -395,6 +395,11 @@ html {
     border-radius: 5px;
 }
 
+.post-content ul,
+.post-content ol {
+    margin: 0 auto 0 20px;
+}
+
 .post-content hr {
     margin: 2em 0;
     border: 0;
