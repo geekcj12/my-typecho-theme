@@ -6,20 +6,17 @@
 */
 $this -> need('header.php');
 ?>
-	<div class="content">
-		<div class="page-content">
+	<main class="main">
+		<div class="content">
 			<h2 class="post-title"><?php $this->title() ?></h2>
 			<div class="links">
 				<?php Links_Plugin::output("
-				<li>
+				<li class='links-item'>
 					<a href='{url}' target='_blank'>
-						<img src='{image}' alt='{name}'/>
-						<h3>{name}</h3>
-						<p>{description}</p>
+						<img src='{image}' alt='{name}' class='links-avatar'>
+						<p class='links-name'>{name}</p>
 					</a>
 				</li>
 				", 0); ?>
 			</div>
-		</div>
-	</div>
-<?php $this -> need('footer.php'); ?>
+	<?php $this -> need('footer.php'); ?>

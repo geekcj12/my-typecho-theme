@@ -84,10 +84,10 @@ html {
     -ms-transform: translateY(-100px);
     -o-transform: translateY(100px);
     transform: translateY(-100px);
-    -webkit-transition: transform .5s ease-out;
-    -moz-transition: transform .5s ease-out;
-    -o-transition: transform .5s ease-out;
-    transition: transform .5s ease-out;
+    -webkit-transition: transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out;
+    -o-transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 .header.slide-down {
@@ -96,10 +96,10 @@ html {
     -ms-transform: translateY(0);
     -o-transform: translateY(0);
     transform: translateY(0);
-    -webkit-transition: transform .5s ease-out;
-    -moz-transition: transform .5s ease-out;
-    -o-transition: transform .5s ease-out;
-    transition: transform .5s ease-out;
+    -webkit-transition: transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out;
+    -o-transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 #wrap {
@@ -132,10 +132,10 @@ html {
     border-right: solid 1px #e4e4e4;
     background: #fff;
     z-index: 4;
-    -webkit-transition: transform .3s ease-out;
-    -moz-transition: transform .3s ease-out;
-    -o-transition: transform .3s ease-out;
-    transition: transform .3s ease-out;
+    -webkit-transition: transform .3s ease-in-out;
+    -moz-transition: transform .3s ease-in-out;
+    -o-transition: transform .3s ease-in-out;
+    transition: transform .3s ease-in-out;
 }
 
 @media screen and (max-width: 767px) {
@@ -166,10 +166,10 @@ html {
     width: 6em;
     height: 6em;
     border-radius: 50%;
-    -webkit-transition: transform .5s ease-out;
-    -moz-transition: transform .5s ease-out;
-    -o-transition: transform .5s ease-out;
-    transition: transform .5s ease-out;
+    -webkit-transition: transform .5s ease-in-out;
+    -moz-transition: transform .5s ease-in-out;
+    -o-transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
 }
 
 .sidebar .avatar:hover {
@@ -195,19 +195,27 @@ html {
     text-align: center;
 }
 
+.menu-item {
+    padding: 12px 0;
+    -webkit-transition: background .3s ease-in-out;
+    -moz-transition: background .3s ease-in-out;
+    -o-transition: background .3s ease-in-out;
+    transition: background .3s ease-in-out;
+}
+
+.menu-item:hover {
+    background: #eee;
+}
+
 .menu-item:not(:first-child) {
-    margin-top: 1.5rem;
+    margin-top: 12px;
 }
 
 .menu-item a {
+    display: block;
     font-size: 18px;
     text-decoration: none;
     color: #999;
-    transition: color .3s;
-}
-
-.menu-item a:hover{
-    color: #51aded;
 }
 
 /* 右侧 */
@@ -267,7 +275,7 @@ html {
 .article-title-link {
     text-decoration: none;
     color: #000;
-    transition: color .3s ease-out;
+    transition: color .3s ease-in-out;
 }
 
 .article-title-link:hover {
@@ -327,7 +335,7 @@ html {
     text-decoration: none;
     font-size: 13px;
     color: #9e9e9e;
-    transition: border .3s ease-out;
+    transition: border .3s ease-in-out;
 }
 
 .page-navigator a:hover,
@@ -394,10 +402,10 @@ html {
 .post-content a{
     color: rgb(37, 168, 219);
     text-decoration: none;
-    -webkit-transition: .5s color ease-out;
-    -moz-transition: .5s color ease-out;
-    -o-transition: .5s color ease-out;
-	transition: .5s color ease-out;
+    -webkit-transition: .5s color ease-in-out;
+    -moz-transition: .5s color ease-in-out;
+    -o-transition: .5s color ease-in-out;
+	transition: .5s color ease-in-out;
 }
 
 .post-content a:hover{
@@ -627,31 +635,21 @@ pre::-webkit-scrollbar-thumb{
     text-align: center;
 }
 
-.links li {
+.links .links-item {
     display: inline-block;
-    position: relative;
-    text-align: left;
-    border-radius: .5em;
-    transition: background .3s ease-out;
+    width: 96px;
+    padding: 12px 0;
+    text-align: center;
 }
 
-.links li:hover {
-    background-color: rgba(88, 88, 88, 0.1);
-}
-
-.links li a {
-    height: 6.5em;
-    width: 10em;
-    float: left;
-    padding: 0 1em 0 6.5em;
+.links .links-item > a {
+    width: 100%;
     text-decoration: none;
     color: #4e687b;
 }
 
-.links li img {
-    position: absolute;
-    top: 1em;
-    left: 1em;
+.links .links-avatar {
+    display: inline-block;
     width: 4.5em;
     height: 4.5em;
     border-radius: 50%;
@@ -659,18 +657,13 @@ pre::-webkit-scrollbar-thumb{
     box-shadow: 0 0.5em 2em #f1f4f7;
 }
 
-.links li h3 {
-    font-weight: normal;
-    padding-top: 8px;
-    line-height: 15px;
-}
-
-.links li p {
-    font-size: 14px;
-    opacity: .5;
+.links .links-name {
     overflow: hidden;
+    width: 100%;
+    font-size: 14px;
     text-overflow: ellipsis;
     white-space: nowrap;
+    opacity: .5;
 }
 
 /* 404 */
