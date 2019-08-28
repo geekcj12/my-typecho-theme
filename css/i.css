@@ -429,12 +429,12 @@ html {
 /* 文章代码高亮 */
 .post-content pre {
     overflow: auto;
-    margin: 1.6em 0;
+    margin: 1em 0;
     padding: 15px 20px;
     border: 1px solid #ddd;
+    border-radius: 3px;
     line-height: 1.2em;
     font-family: "Source Code Pro", Monaco, Menlo, Consolas, monospace;
-    border-radius: 3px;
     background: #2d2d2d;
     color: #ccc;
 }
