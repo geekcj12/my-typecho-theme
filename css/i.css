@@ -346,7 +346,7 @@ html {
 
 /* POST */
 .post-title{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-align: center;
 }
 
@@ -367,19 +367,21 @@ html {
     word-wrap: break-word;
 }
 
-.post h1 {
-    font-size: 1.5rem;
-}
-
-.post-content h2 {
+.post-content h1 {
     font-size: 1.3rem;
 }
 
-.post-content h3 {
-    font-size: 1.15rem;
+.post-content h2 {
+    font-size: 1.2rem;
 }
 
-.post-content h1:before,.post h2:before,.post h3::before{
+.post-content h3 {
+    font-size: 1.1rem;
+}
+
+.post-content h1:before,
+.post-content h2:before,
+.post-content h3::before{
     content:'# ';
     color:#999;
 }
@@ -388,15 +390,15 @@ html {
     font-size: 14px;
 }
 
-.post-content img{
+.post-content img {
     max-width: 100%;
     border-radius: 5px;
 }
 
-.post-content hr{
+.post-content hr {
+    margin: 2em 0;
     border: 0;
     border-bottom: solid 2px #efefef;
-    margin: 2em 0;
 }
 
 .post-content a{
@@ -445,19 +447,15 @@ pre::-webkit-scrollbar-thumb{
     background: #888;
 }
 
-/* ==========================================================================
-   #comments
-   ========================================================================== */
-
+/* #comments */
 #comments {
     margin-top: 15px;
 }
 
 #comments .commentsnum {
-    color: #555;
-    font-size: 1.1rem;
-    font-weight: normal;
     margin: 0 0 5px;
+    font-size: 1.1rem;
+    color: #555;
 }
 
 #comments .text {
