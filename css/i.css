@@ -196,7 +196,7 @@ html {
 }
 
 .menu-item {
-    padding: 12px 0;
+    padding: 10px 0;
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     -o-transition: background .3s ease-in-out;
@@ -208,7 +208,7 @@ html {
 }
 
 .menu-item:not(:first-child) {
-    margin-top: 12px;
+    margin: 8px auto 0 auto;
 }
 
 .menu-item a {
@@ -483,6 +483,7 @@ pre::-webkit-scrollbar-thumb{
     border-radius: 4px;
     outline: none;
     resize: none;
+    font-family: -apple-system,BlinkMacSystemFont,"Pingfang SC",Roboto,"Open Sans","Microsoft Yahei Light","Microsoft YaHei","Helvetica Neue",Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
     box-sizing: border-box;
     background: #fff;
 }
@@ -670,15 +671,12 @@ pre::-webkit-scrollbar-thumb{
 
 /* 404 */
 .error-404 {
-    text-align: center;
     padding: 12em 0;
+    text-align: center;
     letter-spacing: 2px;
 }
 
-.error-404 h2 {
-    font-weight: normal;
-}
-
 .error-404 p {
+    line-height: 36px;
     color: #999;
 }
