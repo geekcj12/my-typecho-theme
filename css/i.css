@@ -42,7 +42,7 @@ select {
 }
 
 html {
-    font-family: -apple-system,BlinkMacSystemFont,"Pingfang SC",Roboto,"Open Sans","Microsoft Yahei Light","Microsoft YaHei","Helvetica Neue",Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
+    font-family: sans-serif;
 }
 
 /* HEADER */
@@ -182,7 +182,8 @@ html {
 
 .sidebar .site-name {
     margin-top: 16px;
-    font-size: 1.5em;   
+    font-size: 1.5em;
+    font-weight: 400;  
 }
 
 .sidebar .site-name > a {
@@ -345,7 +346,7 @@ html {
 }
 
 /* POST */
-.post-title{
+.post-title {
     font-size: 1.3rem;
     text-align: center;
 }
@@ -357,14 +358,23 @@ html {
     color: #9eabb3;
 }
 
-.post-meta i{
+.post-meta i {
     margin-right: 5px;
 }
 
-.post-content{
+.post-content {
     margin: 18px auto;
     line-height: 1.75rem;
     word-wrap: break-word;
+}
+
+.post-content h1,
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+    margin: 12px auto;
 }
 
 .post-content h1 {
@@ -387,6 +397,7 @@ html {
 }
 
 .post-content p {
+    margin: 12px auto;
     font-size: 14px;
 }
 
@@ -398,6 +409,7 @@ html {
 .post-content ul,
 .post-content ol {
     margin: 0 auto 0 20px;
+    font-size: 14px;
 }
 
 .post-content hr {
